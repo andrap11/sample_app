@@ -2,11 +2,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
+gem 'bootstrap-sass','2.0.0'
 
 # Use sqlite3 as the database for Active Record
 group :development do 
   gem 'sqlite3'
-  gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
 end
  
 group :production do 
@@ -42,7 +43,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 group :test do 
+ 
+  gem 'growl', '1.0.3'
+end
+
+group :test, :development do
   gem 'capybara','1.1.2'
+  gem 'rspec-rails', '2.10.0'
 end
 
 
