@@ -8,6 +8,8 @@ gem 'bootstrap-sass','2.0.0'
 group :development do 
   gem 'sqlite3'
   gem 'guard-rspec', '0.5.5'
+
+
 end
  
 group :production do 
@@ -48,8 +50,13 @@ group :test do
 end
 
 group :test, :development do
-  gem 'capybara','1.1.2'
-  gem 'rspec-rails', '2.10.0'
+  gem 'capybara','~> 1.0'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'annotate', '~> 2.4.1.beta'
+  gem 'bcrypt-ruby', '~> 3.1.2'
+  gem 'pry'
+  
+  
 end
 
 
