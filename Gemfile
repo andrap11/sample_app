@@ -44,9 +44,10 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
 group :test do 
- 
   gem 'growl', '1.0.3'
+  gem 'factory_girl_rails' 
 end
 
 group :test, :development do
@@ -55,8 +56,6 @@ group :test, :development do
   gem 'annotate', '~> 2.4.1.beta'
   gem 'bcrypt-ruby', '~> 3.1.2'
   gem 'pry'
-  
-  
 end
 
 
