@@ -22,6 +22,7 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
 
   
@@ -121,5 +122,8 @@ describe User do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
-
+  describe "remember_token" do 
+    before {@user.save}
+    its(:remember_token) {should_not be_blank}
+  end
 end

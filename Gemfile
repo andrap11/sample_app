@@ -49,6 +49,8 @@ end
 group :test do 
   gem 'growl', '1.0.3'
   gem 'factory_girl_rails' 
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :test, :development do
@@ -56,6 +58,7 @@ group :test, :development do
   gem 'rspec-rails', '~> 2.0'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'pry'
+
 end
 
 
